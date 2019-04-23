@@ -3,40 +3,59 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet">
+
     <title>my-project</title>
   </head>
   <body>
     
-    <div id="app"></div>
+    <div id="app">
+      <v-app>
+        <v-content>
+          <v-container>
+            <h1>{{message}}</h1>
+          </v-container>
+        </v-content>
+      </v-app>
+
+    </div>
     <!-- built files will be auto injected -->
 
 
-    <div id="example">
+    <!-- <div id="example">
       <p>원본 메시지: "{{ message }}"</p>
       <p>역순으로 표시한 메시지: "{{ reversedMessage }}"</p>
-    </div>
+    </div> -->
     
 
   
   <!-- 도움되는 콘솔 경고를 포함한 개발 버전 -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
   <!-- 상용버전, 속도와 용량이 최적화됨. -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
 
   <script>
     new Vue({
-      el: '#example',
+      el: '#app',
       data: {
-        message: '안녕하세요'
-      },
-      computed: {
-        // 계산된 getter
-        reversedMessage: function () {
-          // `this` 는 vm 인스턴스를 가리킵니다.
-          return this.message.split('').reverse().join('')
-        }
+        message: 'Hello World'
       }
     })
+
+    // new Vue({
+    //   el: '#example',
+    //   data: {
+    //     message: '안녕하세요'
+    //   },
+    //   computed: {
+    //     // 계산된 getter
+    //     reversedMessage: function () {
+    //       // `this` 는 vm 인스턴스를 가리킵니다.
+    //       return this.message.split('').reverse().join('')
+    //     }
+    //   }
+    // })
   </script>
 
   
